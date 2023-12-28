@@ -1,1 +1,0 @@
-import{_ as e,o as s,c as t,a as n}from"./app-xbm7ZPbY.js";const c={},o=n("p",null,"send",-1),_=[o];function a(r,l){return s(),t("div",null,_)}const f=e(c,[["render",a],["__file","send.html.vue"]]);export{f as default};
