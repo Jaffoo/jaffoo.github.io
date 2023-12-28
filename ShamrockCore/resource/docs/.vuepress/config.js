@@ -6,7 +6,7 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: 'ShamrockCore',
   description: 'ShamrockCore',
-  base:'/ShamrockCore/doc/',
+  base:'/doc/',
   dest:'../doc',
   head: [['link', { rel: 'icon', href: 'https://v2.vuepress.vuejs.org/images/icons/favicon-32x32.png' }]],
   theme: defaultTheme({
