@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-rc.0">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <link rel="icon" href="https://v2.vuepress.vuejs.org/images/icons/favicon-32x32.png"><title>ShamrockCore</title><meta name="description" content="ShamrockCore">
+    <link rel="preload" href="/ShamrockCore/doc/assets/style-0MItM60m.css" as="style"><link rel="stylesheet" href="/ShamrockCore/doc/assets/style-0MItM60m.css">
+    <link rel="modulepreload" href="/ShamrockCore/doc/assets/app-RsnX7yEo.js"><link rel="modulepreload" href="/ShamrockCore/doc/assets/message.html-Bq1v0Qhh.js"><link rel="modulepreload" href="/ShamrockCore/doc/assets/message.html-UwuQtXbf.js">
+    <link rel="prefetch" href="/ShamrockCore/doc/assets/index.html-hke8W8HX.js" as="script"><link rel="prefetch" href="/ShamrockCore/doc/assets/info.html-QfKTGZS2.js" as="script"><link rel="prefetch" href="/ShamrockCore/doc/assets/start.html-pfD-pY3I.js" as="script"><link rel="prefetch" href="/ShamrockCore/doc/assets/event.html-YHIpqS-7.js" as="script"><link rel="prefetch" href="/ShamrockCore/doc/assets/404.html-r6aI8Oiv.js" as="script"><link rel="prefetch" href="/ShamrockCore/doc/assets/index.html-r8HRvYVd.js" as="script"><link rel="prefetch" href="/ShamrockCore/doc/assets/info.html-Hf1LM3R0.js" as="script"><link rel="prefetch" href="/ShamrockCore/doc/assets/start.html-KtUI7V5L.js" as="script"><link rel="prefetch" href="/ShamrockCore/doc/assets/event.html-DfpPSblO.js" as="script"><link rel="prefetch" href="/ShamrockCore/doc/assets/404.html-n5v3s96r.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><!--[--><header class="navbar"><div class="toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a href="/ShamrockCore/doc/" class=""><img class="logo" src="/ShamrockCore/doc/images/wd.jpg" alt="ShamrockCore"><span class="site-name can-hide">ShamrockCore</span></a></span><div class="navbar-items-wrapper" style=""><!--[--><!--]--><nav class="navbar-items can-hide"><!--[--><div class="navbar-item"><a href="/ShamrockCore/doc/info" class="" aria-label="指南"><!--[--><!--]--> 指南 <!--[--><!--]--></a></div><div class="navbar-item"><a href="/ShamrockCore/doc/start" class="" aria-label="快速开始"><!--[--><!--]--> 快速开始 <!--[--><!--]--></a></div><div class="navbar-item"><div class="navbar-dropdown-wrapper"><button class="navbar-dropdown-title" type="button" aria-label="API"><span class="title">API</span><span class="arrow down"></span></button><button class="navbar-dropdown-title-mobile" type="button" aria-label="API"><span class="title">API</span><span class="right arrow"></span></button><ul style="display:none;" class="navbar-dropdown"><!--[--><li class="navbar-dropdown-item"><a href="/ShamrockCore/doc/api/message" class="router-link-active" aria-label="消息API"><!--[--><!--]--> 消息API <!--[--><!--]--></a></li><li class="navbar-dropdown-item"><a href="/ShamrockCore/doc/api/event" class="" aria-label="事件API"><!--[--><!--]--> 事件API <!--[--><!--]--></a></li><!--]--></ul></div></div><div class="navbar-item"><div class="navbar-dropdown-wrapper"><button class="navbar-dropdown-title" type="button" aria-label="源码"><span class="title">源码</span><span class="arrow down"></span></button><button class="navbar-dropdown-title-mobile" type="button" aria-label="源码"><span class="title">源码</span><span class="right arrow"></span></button><ul style="display:none;" class="navbar-dropdown"><!--[--><li class="navbar-dropdown-item"><a class="external-link" href="https://github.com/Jaffoo/ShamrockCore.NET" rel="noopener noreferrer" target="_blank" aria-label="GitHub"><!--[--><!--]--> GitHub <span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span><!--[--><!--]--></a></li><li class="navbar-dropdown-item"><a class="external-link" href="https://gitee.com/jaffoo/ShamrockCore.NET" rel="noopener noreferrer" target="_blank" aria-label="Gitee"><!--[--><!--]--> Gitee <span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span><!--[--><!--]--></a></li><!--]--></ul></div></div><!--]--></nav><!--[--><!--]--><button class="toggle-color-mode-button" title="toggle color mode"><svg style="" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg style="display:none;" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><form class="search-box" role="search"><input type="search" placeholder="搜索文档" autocomplete="off" spellcheck="false" value><!----></form></div></header><!--]--><div class="sidebar-mask"></div><!--[--><aside class="sidebar"><nav class="navbar-items"><!--[--><div class="navbar-item"><a href="/ShamrockCore/doc/info" class="" aria-label="指南"><!--[--><!--]--> 指南 <!--[--><!--]--></a></div><div class="navbar-item"><a href="/ShamrockCore/doc/start" class="" aria-label="快速开始"><!--[--><!--]--> 快速开始 <!--[--><!--]--></a></div><div class="navbar-item"><div class="navbar-dropdown-wrapper"><button class="navbar-dropdown-title" type="button" aria-label="API"><span class="title">API</span><span class="arrow down"></span></button><button class="navbar-dropdown-title-mobile" type="button" aria-label="API"><span class="title">API</span><span class="right arrow"></span></button><ul style="display:none;" class="navbar-dropdown"><!--[--><li class="navbar-dropdown-item"><a href="/ShamrockCore/doc/api/message" class="router-link-active" aria-label="消息API"><!--[--><!--]--> 消息API <!--[--><!--]--></a></li><li class="navbar-dropdown-item"><a href="/ShamrockCore/doc/api/event" class="" aria-label="事件API"><!--[--><!--]--> 事件API <!--[--><!--]--></a></li><!--]--></ul></div></div><div class="navbar-item"><div class="navbar-dropdown-wrapper"><button class="navbar-dropdown-title" type="button" aria-label="源码"><span class="title">源码</span><span class="arrow down"></span></button><button class="navbar-dropdown-title-mobile" type="button" aria-label="源码"><span class="title">源码</span><span class="right arrow"></span></button><ul style="display:none;" class="navbar-dropdown"><!--[--><li class="navbar-dropdown-item"><a class="external-link" href="https://github.com/Jaffoo/ShamrockCore.NET" rel="noopener noreferrer" target="_blank" aria-label="GitHub"><!--[--><!--]--> GitHub <span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span><!--[--><!--]--></a></li><li class="navbar-dropdown-item"><a class="external-link" href="https://gitee.com/jaffoo/ShamrockCore.NET" rel="noopener noreferrer" target="_blank" aria-label="Gitee"><!--[--><!--]--> Gitee <span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span><!--[--><!--]--></a></li><!--]--></ul></div></div><!--]--></nav><!--[--><!--]--><ul class="sidebar-items"><!--[--><li><p tabindex="0" class="sidebar-item sidebar-heading"> <!----></p><ul style="" class="sidebar-item-children"><!--[--><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#消息构建" class="router-link-active router-link-exact-active sidebar-item" aria-label="消息构建"><!--[--><!--]--> 消息构建 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#主动发送消息" class="router-link-active router-link-exact-active sidebar-item" aria-label="主动发送消息"><!--[--><!--]--> 主动发送消息 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#被动动发送消息" class="router-link-active router-link-exact-active sidebar-item" aria-label="被动动发送消息"><!--[--><!--]--> 被动动发送消息 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#消息类型" class="router-link-active router-link-exact-active sidebar-item" aria-label="消息类型"><!--[--><!--]--> 消息类型 <!--[--><!--]--></a><ul style="" class="sidebar-item-children"><!--[--><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#at消息" class="router-link-active router-link-exact-active sidebar-item" aria-label="at消息"><!--[--><!--]--> at消息 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#文本消息" class="router-link-active router-link-exact-active sidebar-item" aria-label="文本消息"><!--[--><!--]--> 文本消息 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#图片消息" class="router-link-active router-link-exact-active sidebar-item" aria-label="图片消息"><!--[--><!--]--> 图片消息 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#音频消息" class="router-link-active router-link-exact-active sidebar-item" aria-label="音频消息"><!--[--><!--]--> 音频消息 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#视频消息" class="router-link-active router-link-exact-active sidebar-item" aria-label="视频消息"><!--[--><!--]--> 视频消息 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#表情消息" class="router-link-active router-link-exact-active sidebar-item" aria-label="表情消息"><!--[--><!--]--> 表情消息 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#回复消息" class="router-link-active router-link-exact-active sidebar-item" aria-label="回复消息"><!--[--><!--]--> 回复消息 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#篮球表情" class="router-link-active router-link-exact-active sidebar-item" aria-label="篮球表情"><!--[--><!--]--> 篮球表情 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#猜拳表情" class="router-link-active router-link-exact-active sidebar-item" aria-label="猜拳表情"><!--[--><!--]--> 猜拳表情 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#骰子表情" class="router-link-active router-link-exact-active sidebar-item" aria-label="骰子表情"><!--[--><!--]--> 骰子表情 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#戳一戳表情" class="router-link-active router-link-exact-active sidebar-item" aria-label="戳一戳表情"><!--[--><!--]--> 戳一戳表情 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#戳一戳-双击头像" class="router-link-active router-link-exact-active sidebar-item" aria-label="戳一戳(双击头像)"><!--[--><!--]--> 戳一戳(双击头像) <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#音乐" class="router-link-active router-link-exact-active sidebar-item" aria-label="音乐"><!--[--><!--]--> 音乐 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#位置" class="router-link-active router-link-exact-active sidebar-item" aria-label="位置"><!--[--><!--]--> 位置 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#天气" class="router-link-active router-link-exact-active sidebar-item" aria-label="天气"><!--[--><!--]--> 天气 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#链接分享" class="router-link-active router-link-exact-active sidebar-item" aria-label="链接分享"><!--[--><!--]--> 链接分享 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#礼物消息" class="router-link-active router-link-exact-active sidebar-item" aria-label="礼物消息"><!--[--><!--]--> 礼物消息 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#合并转发" class="router-link-active router-link-exact-active sidebar-item" aria-label="合并转发"><!--[--><!--]--> 合并转发 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#合并转发-1" class="router-link-active router-link-exact-active sidebar-item" aria-label="合并转发"><!--[--><!--]--> 合并转发 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#json消息" class="router-link-active router-link-exact-active sidebar-item" aria-label="Json消息"><!--[--><!--]--> Json消息 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/ShamrockCore/doc/api/message.html#xml消息" class="router-link-active router-link-exact-active sidebar-item" aria-label="XML消息"><!--[--><!--]--> XML消息 <!--[--><!--]--></a><!----></li><!--]--></ul></li><!--]--></ul></li><!--]--></ul><!--[--><!--]--></aside><!--]--><!--[--><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><!--]--><div><h2 id="消息构建" tabindex="-1"><a class="header-anchor" href="#消息构建" aria-hidden="true">#</a> 消息构建</h2><p>类MessageChain就是消息链，此类继承于<code>List&lt;Message&gt;</code>，你平时如何使用List，此类依然适用。 <br></p><p>构建消息链：</p><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+{
+    new TextMessage(&quot;你好qq号是123的群友，我at了你！&quot;),
+    new AtMessage(123),
+};
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>或者</p><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChainBuilder()
+.Text(&quot;你好qq号是123的群友，我at了你！&quot;)
+.At(123)
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="主动发送消息" tabindex="-1"><a class="header-anchor" href="#主动发送消息" aria-hidden="true">#</a> 主动发送消息</h2><p>发送消息分为主动和被动发送，主动调用静态类（MessageManager）可发送消息。（请勿在初始化前调用） <br>示例：</p><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>//以下方法均支持重载，展示只是发送简单纯文本消息，发送复杂消息，请用消息链。
+await MessageManager.SendGroupMsgAsync(123,&quot;这是群号为123的群吗?&quot;);
+await MessageManager.SendPrivateMsgAsync(123,&quot;你的qq才有3位数诶。&quot;);
+//还有更多发送消息的方法，比如合并转发等。如需使用，请自行查看
+//由于本人精力有限，合并转发等特殊发消息未作测试，如使用有问题，请反馈给我，会尽快处理。
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="被动动发送消息" tabindex="-1"><a class="header-anchor" href="#被动动发送消息" aria-hidden="true">#</a> 被动动发送消息</h2><p>当接收到消息时，无论是好友还是群消息，都可以快速回复 <br>例如：</p><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>//群
+bot.MessageReceived.OfType&lt;GroupReceiver&gt;().Subscribe(async msg =&gt;{
+    await msg.SendGroupMsgAsync(&quot;你好，我收到消息了&quot;)
+    await msg.Member.SendPrivateMsgAsync(&quot;群友，你好&quot;);
+    //目前openshamrock不支持发送临时消息，所以此方法需要加好友。
+})
+
+//好友
+bot.MessageReceived.OfType&lt;FriendReceiver&gt;().Subscribe(async msg =&gt;{
+    await msg.SendPrivateMsgAsync(&quot;你好，我收到消息了&quot;)
+})
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>同样的，以上方法支持重载</p><h2 id="消息类型" tabindex="-1"><a class="header-anchor" href="#消息类型" aria-hidden="true">#</a> 消息类型</h2><h3 id="at消息" tabindex="-1"><a class="header-anchor" href="#at消息" aria-hidden="true">#</a> at消息</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+{
+    new AtMessage(123),//at 123
+    new AtMessage(0),//at 全体成员，需要管理员权限
+    new AtMessage(),//at 全体成员，需要管理员权限
+};
+//at
+MessageChain msgChain = new MessageChainBuilder()
+.At(123)
+//at 全体成员，需要管理员权限
+.AtAll()
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="文本消息" tabindex="-1"><a class="header-anchor" href="#文本消息" aria-hidden="true">#</a> 文本消息</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+{
+    new TextMessage(&quot;123&quot;),
+};
+//at
+MessageChain msgChain = new MessageChainBuilder()
+.Text(&quot;123&quot;)
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="图片消息" tabindex="-1"><a class="header-anchor" href="#图片消息" aria-hidden="true">#</a> 图片消息</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>//参数三选一，优先级filePath&gt;url&gt;base64
+MessageChain msgChain = new MessageChain()
+{
+    new ImageMessage(&quot;filePath&quot;,&quot;url&quot;,&quot;base64&quot;),
+};
+
+MessageChain msgChain = new MessageChainBuilder()
+.ImageByPath(&quot;path&quot;)
+.ImageByUrl(&quot;url&quot;)
+.ImageByBase64(&quot;base64&quot;)
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="音频消息" tabindex="-1"><a class="header-anchor" href="#音频消息" aria-hidden="true">#</a> 音频消息</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>//参数二选一，优先级filePath&gt;url&gt;base64
+MessageChain msgChain = new MessageChain()
+{
+    new RecordMessage(&quot;filePath&quot;,&quot;url&quot;),
+};
+
+MessageChain msgChain = new MessageChainBuilder()
+.RecordByPath(&quot;path&quot;)
+.RecordByUrl(&quot;url&quot;)
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="视频消息" tabindex="-1"><a class="header-anchor" href="#视频消息" aria-hidden="true">#</a> 视频消息</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+{
+    new VideoMessage(&quot;filePath&quot;),
+};
+
+MessageChain msgChain = new MessageChainBuilder()
+.Video(&quot;path&quot;)
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="表情消息" tabindex="-1"><a class="header-anchor" href="#表情消息" aria-hidden="true">#</a> 表情消息</h3><p>表情ID可以到<a href="https://github.com/richardchien/coolq-http-api/wiki/%E8%A1%A8%E6%83%85-CQ-%E7%A0%81-ID-%E8%A1%A8" target="_blank" rel="noopener noreferrer">这里<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a>查看</p><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+{
+    new FaceMessage(1),//表情id
+};
+
+MessageChain msgChain = new MessageChainBuilder()
+.Face(1)
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="回复消息" tabindex="-1"><a class="header-anchor" href="#回复消息" aria-hidden="true">#</a> 回复消息</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+{
+    new ReplyMessage(1),//消息id
+};
+
+MessageChain msgChain = new MessageChainBuilder()
+.Reply(1)//消息id
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="篮球表情" tabindex="-1"><a class="header-anchor" href="#篮球表情" aria-hidden="true">#</a> 篮球表情</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+{
+    new BallMessage(Data.Model.Ball.ZZ),
+};
+
+MessageChain msgChain = new MessageChainBuilder()
+.Ball(Data.Model.Ball.ZZ)
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="猜拳表情" tabindex="-1"><a class="header-anchor" href="#猜拳表情" aria-hidden="true">#</a> 猜拳表情</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+{
+    new RpsMessage(Data.Model.Rps.ST),
+};
+
+MessageChain msgChain = new MessageChainBuilder()
+.Rps(Data.Model.Rps.ST)
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="骰子表情" tabindex="-1"><a class="header-anchor" href="#骰子表情" aria-hidden="true">#</a> 骰子表情</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+{
+    new DiceMessage(6),//1-6点
+};
+
+MessageChain msgChain = new MessageChainBuilder()
+.Dice(6)//1-6点
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="戳一戳表情" tabindex="-1"><a class="header-anchor" href="#戳一戳表情" aria-hidden="true">#</a> 戳一戳表情</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+{
+    new PokeMessage(new PokeMessage.Body()),
+};
+
+MessageChain msgChain = new MessageChainBuilder()
+.Poke(new PokeMessage.Body())//1-6点
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="戳一戳-双击头像" tabindex="-1"><a class="header-anchor" href="#戳一戳-双击头像" aria-hidden="true">#</a> 戳一戳(双击头像)</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+{
+    new TouchMessage(123),//qq号
+};
+
+MessageChain msgChain = new MessageChainBuilder()
+.Touch(123)//qq号
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="音乐" tabindex="-1"><a class="header-anchor" href="#音乐" aria-hidden="true">#</a> 音乐</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+{
+    new MusicMessage(1,&quot;qq&quot;),//音乐id，来源qq/163
+};
+
+MessageChain msgChain = new MessageChainBuilder()
+.Music(1,&quot;qq&quot;)//qq号
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>或者自定义：</p><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+{
+    //MusicCustomMessage.Body中的属性请自行查看
+    new MusicCustomMessage(new MusicCustomMessage.Body(){}),
+};
+
+MessageChain msgChain = new MessageChainBuilder()
+.MusicCustom(new MusicCustomMessage.Body(){})
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="位置" tabindex="-1"><a class="header-anchor" href="#位置" aria-hidden="true">#</a> 位置</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+{
+    new LocationMessage(new LocationMessage.Body(){
+        Lat=123,
+        Lon=321,//经纬度必填
+    }),
+};
+
+MessageChain msgChain = new MessageChainBuilder()
+.Location(new LocationMessage.Body(){})
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="天气" tabindex="-1"><a class="header-anchor" href="#天气" aria-hidden="true">#</a> 天气</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+{
+    new WeatherMessage(new WeatherMessage.Body(){
+        Code=123,//必填
+        City=&quot;北京&quot;
+    }),
+};
+
+MessageChain msgChain = new MessageChainBuilder()
+.Weather(new WeatherMessage.Body(){})
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="链接分享" tabindex="-1"><a class="header-anchor" href="#链接分享" aria-hidden="true">#</a> 链接分享</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+{
+    new ShareMessage(new ShareMessage.Body()),//Body中的属性请自行查看
+};
+
+MessageChain msgChain = new MessageChainBuilder()
+.Share(new ShareMessage.Body(){})
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="礼物消息" tabindex="-1"><a class="header-anchor" href="#礼物消息" aria-hidden="true">#</a> 礼物消息</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+{
+    new GiftMessage(123,1),//qq号，礼物id
+};
+
+MessageChain msgChain = new MessageChainBuilder()
+.Gift(123,1)
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="合并转发" tabindex="-1"><a class="header-anchor" href="#合并转发" aria-hidden="true">#</a> 合并转发</h3><p>我也不知道有没有用，如果有人需要且没用，请反馈给我。</p><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+{
+    //合并转发resid，我也不知道这个参数是个啥
+    new MergeMessage(1),
+};
+
+MessageChain msgChain = new MessageChainBuilder()
+.Merge(1)
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="合并转发-1" tabindex="-1"><a class="header-anchor" href="#合并转发-1" aria-hidden="true">#</a> 合并转发</h3><p>我也不知道有没有用，如果有人需要且没用，请反馈给我。</p><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+{
+    //消息ID，我也不知道这个参数是不是messageid
+    new MergeNodeMessage(1),
+};
+
+MessageChain msgChain = new MessageChainBuilder()
+.MergeNode(1)
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="json消息" tabindex="-1"><a class="header-anchor" href="#json消息" aria-hidden="true">#</a> Json消息</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+{
+    new JsonMessage(new JsonMessage.Body()),
+};
+
+MessageChain msgChain = new MessageChainBuilder()
+.Json(new JsonMessage.Body())
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="xml消息" tabindex="-1"><a class="header-anchor" href="#xml消息" aria-hidden="true">#</a> XML消息</h3><p>暂不支持</p></div><!--[--><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">Last Updated: </span><!----></div><div class="meta-item contributors"><span class="meta-item-label">Contributors: </span><span class="meta-item-info"><!--[--><!--[--><span class="contributor" title="email: gaffoo@163.com">Jaffoo</span><!----><!--]--><!--]--></span></div></footer><!----><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
+    <script type="module" src="/ShamrockCore/doc/assets/app-RsnX7yEo.js" defer></script>
+  </body>
+</html>
