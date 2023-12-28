@@ -23,11 +23,11 @@ export default defineUserConfig({
         text: 'API',
         children: [
           {
-            text:'接收消息',
-            link:'/api/revice',
+            text:'消息API',
+            link:'/api/message',
           },{
-            text:'发送消息',
-            link:'/api/send',
+            text:'事件API',
+            link:'/api/event',
           },
         ],
       },{
