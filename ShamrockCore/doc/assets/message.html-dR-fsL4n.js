@@ -1,4 +1,4 @@
-import{_ as a,r as d,o as l,c as r,a as i,b as e,d as v,e as n}from"./app-RsnX7yEo.js";const u={},c=n(`<h2 id="消息构建" tabindex="-1"><a class="header-anchor" href="#消息构建" aria-hidden="true">#</a> 消息构建</h2><p>类MessageChain就是消息链，此类继承于<code>List&lt;Message&gt;</code>，你平时如何使用List，此类依然适用。 <br></p><p>构建消息链：</p><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+import{_ as a,r as d,o as l,c as r,a as i,b as e,d as v,e as n}from"./app-LGl6Qalc.js";const u={},c=n(`<h2 id="消息构建" tabindex="-1"><a class="header-anchor" href="#消息构建" aria-hidden="true">#</a> 消息构建</h2><p>类MessageChain就是消息链，此类继承于<code>List&lt;Message&gt;</code>，你平时如何使用List，此类依然适用。 <br></p><p>构建消息链：</p><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
 {
     new TextMessage(&quot;你好qq号是123的群友，我at了你！&quot;),
     new AtMessage(123),

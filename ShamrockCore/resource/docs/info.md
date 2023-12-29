@@ -41,4 +41,4 @@
 - 如果使用的模拟器，别忘记模拟器和PC端口映射；
 ## 反馈与交流
 <br>Github提交[Issues](https://github.com/Jaffoo/ShamrockCore.NET/issues);
-<br>🐧群：327443854。
+<br>🐧群：[327443854](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=xeymCEAlzjVcq4zO9vQQwsXoHulWWw5b&authKey=tj6nblI3QUewB9NAZsQ18LrAWQTXwlzp1ObiNK3m6tn3Kle%2BE6gKlOZxcYbbNkm%2B&noverify=0&group_code=327443854)。

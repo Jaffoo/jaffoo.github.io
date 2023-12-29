@@ -28,7 +28,10 @@ export default defineUserConfig({
           },{
             text:'事件API',
             link:'/api/event',
-          },
+          },{
+            text:'常用API',
+            link:'/api/common',
+          }
         ],
       },{
         text: '源码',

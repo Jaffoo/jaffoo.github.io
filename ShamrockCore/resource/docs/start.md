@@ -48,6 +48,12 @@ bot.MessageReceived.OfType<FriendReceiver>().Subscribe(async msg =>{
 //所有事件消息
 bot.EventReceived.OfType<EventBase>().Subscribe(async msg =>{
     await Console.Out.WriteLineAsync("事件基类：" + msg.ToJsonString());
+    if (msg.EventType == EventType.friend)//v1.0.0暂无此属性，下一个版本加上
+    {
+        var resq = msg as FriendAddEvent;
+        if (resq == null) return;
+        Console.WriteLine("好友请求事件：" + msg.ToJsonString());
+    }
 })
 //具体事件消息
 bot.EventReceived.OfType<FriendAddEvent>().Subscribe(async msg =>{
