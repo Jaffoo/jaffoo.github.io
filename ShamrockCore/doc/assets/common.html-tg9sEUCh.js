@@ -1,4 +1,4 @@
-import{_ as t,o as d,c as e,e as r}from"./app-LGl6Qalc.js";const a={},i=r(`<h2 id="群聊相关api" tabindex="-1"><a class="header-anchor" href="#群聊相关api" aria-hidden="true">#</a> 群聊相关API</h2><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>bot.MessageReceived.OfType&lt;GroupReceiver&gt;().Subscribe(async msg =&gt;
+import{_ as t,o as d,c as e,e as r}from"./app-11lmL9qc.js";const a={},i=r(`<h2 id="群聊相关api" tabindex="-1"><a class="header-anchor" href="#群聊相关api" aria-hidden="true">#</a> 群聊相关API</h2><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>bot.MessageReceived.OfType&lt;GroupReceiver&gt;().Subscribe(async msg =&gt;
 {
     //具体看表格
 })

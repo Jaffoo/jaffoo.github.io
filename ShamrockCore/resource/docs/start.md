@@ -1,6 +1,6 @@
 ## Nuget安装
 Nuget搜索ShamrockCore即可下载使用，同时，你可能还需要安装Manganese和System.Reactive.Linq。
-### 命名空间如下
+### 可能需要的命名空间如下
 <details>
 
 ```c#
@@ -34,13 +34,26 @@ await bot.Start();
 bot.MessageReceived.OfType<GroupReceiver>().Subscribe(async msg =>{
     await Console.Out.WriteLineAsync("群消息：" + msg.ToJsonString());
 })
-```
 
-### 好友消息
-```C#
 bot.MessageReceived.OfType<FriendReceiver>().Subscribe(async msg =>{
     await Console.Out.WriteLineAsync("好友消息：" + msg.ToJsonString());
 })
+
+//所有消息
+bot.MessageReceived.OfType<MessageReceiverBase>().Subscribe(async msg =>
+{
+    if (msg.Type == PostMessageType.Group)
+    {
+        var msg1 = msg as GroupReceiver;
+        await Console.Out.WriteLineAsync("群消息：" + msg1.ToJsonString());
+    }
+    if (msg.Type == PostMessageType.Friend)
+    {
+        var msg1 = msg as FriendReceiver;
+        await Console.Out.WriteLineAsync("好友消息：" + msg1.ToJsonString());
+    }
+});
+bot.
 ```
 
 ### 事件消息
@@ -48,7 +61,7 @@ bot.MessageReceived.OfType<FriendReceiver>().Subscribe(async msg =>{
 //所有事件消息
 bot.EventReceived.OfType<EventBase>().Subscribe(async msg =>{
     await Console.Out.WriteLineAsync("事件基类：" + msg.ToJsonString());
-    if (msg.EventType == EventType.friend)//v1.0.0暂无此属性，下一个版本加上
+    if (msg.EventType == PostEventType.Friend)//v1.0.0暂无此属性，下一个版本加上
     {
         var resq = msg as FriendAddEvent;
         if (resq == null) return;
