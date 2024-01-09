@@ -1,19 +1,25 @@
 ## 事件监听说明
-以下所有事件都可以有两种方法监听，你只需要选择其中一个就行。
 ```C#
-bot.EventReceived.OfType<EventBase>().Subscribe(async msg =>
-{
-    if (msg.EventType == PostEventType.Friend)
+//所有事件消息
+bot.EventReceived.OfType<EventBase>().Subscribe(async msg =>{
+    await Console.Out.WriteLineAsync("事件基类：" + msg.ToJsonString());
+    if (msg.EventType == PostEventType.Friend)//v1.0.0暂无此属性，下一个版本加上
     {
         var resq = msg as FriendAddEvent;
         if (resq == null) return;
         Console.WriteLine("好友请求事件：" + msg.ToJsonString());
     }
-});
-//或者
-bot.EventReceived.OfType<FriendAddEvent>().Subscribe(async msg =>
+})
+//或者具体事件消息
+bot.EventReceived.OfType<FriendAddEvent>().Subscribe(async msg =>{
+    await Console.Out.WriteLineAsync("好友请求事件：" + msg.ToJsonString());
+})
+
+
+//ws断开事件
+bot.DisconnectionHappened.Subscribe(e =>
 {
-    Console.WriteLine("好友请求事件：" + msg.ToJsonString());
+    Console.WriteLine("webscoket断开连接：" + e);
 });
 ```
 

@@ -1,3 +1,48 @@
+## 接收消息
+```C#
+//所有消息
+bot.MessageReceived.OfType<MessageReceiverBase>().Subscribe(async msg =>
+{
+    if (msg.Type == PostMessageType.Group)
+    {
+        var msg1 = msg as GroupReceiver;
+        await Console.Out.WriteLineAsync("群消息：" + msg1.ToJsonString());
+    }
+    if (msg.Type == PostMessageType.Friend)
+    {
+        var msg1 = msg as FriendReceiver;
+        await Console.Out.WriteLineAsync("好友消息：" + msg1.ToJsonString());
+    }
+});
+//或者分开
+bot.MessageReceived.OfType<GroupReceiver>().Subscribe(async msg =>{
+    await Console.Out.WriteLineAsync("群消息：" + msg.ToJsonString());
+})
+
+bot.MessageReceived.OfType<FriendReceiver>().Subscribe(async msg =>{
+    await Console.Out.WriteLineAsync("好友消息：" + msg.ToJsonString());
+})
+```
+
+## 消息类型转换
+```C#
+bot.MessageReceived.OfType<GroupReceiver>().Subscribe(async msg =>
+{
+    await Console.Out.WriteLineAsync("群消息：" + msg.ToJsonString());
+    foreach (var item in msg.Message)
+    {
+        if (item.Type == MessageType.Text)
+        {
+            var textMsg = item.ConvertTo<TextMessage>();
+        }
+        if (item.Type == MessageType.Image)
+        {
+            var imageMsg = item.ConvertTo<ImageMessage>();
+        }
+    }
+});
+```
+
 ## 消息构建
 
 类MessageChain就是消息链，此类继承于`List<Message>`，你平时如何使用List，此类依然适用。

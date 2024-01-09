@@ -30,53 +30,28 @@ await bot.Start();
 
 ## 接收消息
 ### 群消息
+[更多](/ShamrockCore/doc/api/event.html#事件监听说明)
 ```C#
 bot.MessageReceived.OfType<GroupReceiver>().Subscribe(async msg =>{
     await Console.Out.WriteLineAsync("群消息：" + msg.ToJsonString());
 })
+```
 
+### 好友消息
+```C#
 bot.MessageReceived.OfType<FriendReceiver>().Subscribe(async msg =>{
     await Console.Out.WriteLineAsync("好友消息：" + msg.ToJsonString());
 })
-
-//所有消息
-bot.MessageReceived.OfType<MessageReceiverBase>().Subscribe(async msg =>
-{
-    if (msg.Type == PostMessageType.Group)
-    {
-        var msg1 = msg as GroupReceiver;
-        await Console.Out.WriteLineAsync("群消息：" + msg1.ToJsonString());
-    }
-    if (msg.Type == PostMessageType.Friend)
-    {
-        var msg1 = msg as FriendReceiver;
-        await Console.Out.WriteLineAsync("好友消息：" + msg1.ToJsonString());
-    }
-});
-bot.
 ```
 
 ### 事件消息
+
+[更多](/ShamrockCore/doc/api/message.html#接收消息)
+
 ```C#
-//所有事件消息
-bot.EventReceived.OfType<EventBase>().Subscribe(async msg =>{
-    await Console.Out.WriteLineAsync("事件基类：" + msg.ToJsonString());
-    if (msg.EventType == PostEventType.Friend)//v1.0.0暂无此属性，下一个版本加上
-    {
-        var resq = msg as FriendAddEvent;
-        if (resq == null) return;
-        Console.WriteLine("好友请求事件：" + msg.ToJsonString());
-    }
-})
-//具体事件消息
 bot.EventReceived.OfType<FriendAddEvent>().Subscribe(async msg =>{
     await Console.Out.WriteLineAsync("好友请求事件：" + msg.ToJsonString());
 })
-//ws断开事件
-bot.DisconnectionHappened.Subscribe(e =>
-{
-    Console.WriteLine("webscoket断开连接：" + e);
-});
 ```
 
 ### 未知消息
