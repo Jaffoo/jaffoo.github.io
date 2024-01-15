@@ -172,6 +172,12 @@ var group = bot.Groups.FirstOrDefault();
 <td>group.UploadFilesByPath()</td>
 <td>UploadFilesByUrl()，UploadFilesByBase64</td>
 </tr>
+
+<tr>
+<td>上传到群文件</td>
+<td>group.UploadFilesByPath()</td>
+<td>UploadFilesByUrl()，UploadFilesByBase64</td>
+</tr>
 </table>
 
 ## 好友相关API
@@ -181,9 +187,9 @@ var friend = bot.Firends.FirstOrDefault();
 ```
 <table>
 <tr>
-<th>上传私聊文件</th>
-<th>friend.UploadFilesByPath()</th>
-<th>UploadFilesByUrl,UploadFilesByBase64</th>
+<th>机器人可@全体成员的剩余次数</th>
+<th>friend.AtAllCount</th>
+<th></th>
 </tr>
 </table>
 

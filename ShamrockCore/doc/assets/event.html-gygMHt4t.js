@@ -1,4 +1,4 @@
-import{_ as t,o as e,c as d,e as n}from"./app-UA-XK0GY.js";const i={},s=n(`<h2 id="事件监听说明" tabindex="-1"><a class="header-anchor" href="#事件监听说明" aria-hidden="true">#</a> 事件监听说明</h2><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>//所有事件消息
+import{_ as t,o as e,c as d,e as n}from"./app-cwFVImHW.js";const i={},s=n(`<h2 id="事件监听说明" tabindex="-1"><a class="header-anchor" href="#事件监听说明" aria-hidden="true">#</a> 事件监听说明</h2><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>//所有事件消息
 bot.EventReceived.OfType&lt;EventBase&gt;().Subscribe(async msg =&gt;{
     await Console.Out.WriteLineAsync(&quot;事件基类：&quot; + msg.ToJsonString());
     if (msg.EventType == PostEventType.Friend)//v1.0.0暂无此属性，下一个版本加上
