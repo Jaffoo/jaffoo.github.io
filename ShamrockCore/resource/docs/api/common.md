@@ -16,12 +16,12 @@ bot.MessageReceived.OfType<GroupReceiver>().Subscribe(async msg =>
 <tr>
 <td>禁言</td>
 <td>msg.Sender.Ban(10)</td>
-<td>单位：秒，时间为0是解禁</td>
+<td>单位：秒</td>
 </tr>
 
 <tr>
 <td>解禁</td>
-<td>msg.Sender.CancelBan()</td>
+<td>msg.Sender.NoBan()</td>
 <td></td>
 </tr>
 
@@ -120,14 +120,14 @@ var group = bot.Groups.FirstOrDefault();
 </tr>
 
 <tr>
-<td>全体禁言</td>
-<td>group.AllBan()</td>
-<td></td>
+<td>机器人可@全体成员的剩余次数</td>
+<td>group.AtAllCount</td>
+<td>如果机器人不是管理，次数为0</td>
 </tr>
 
 <tr>
-<td>全体取消禁言</td>
-<td>group.AllBanCancel()</td>
+<td>全体禁言/取消禁言</td>
+<td>group.AllBan(true/false)</td>
 <td></td>
 </tr>
 
@@ -146,7 +146,7 @@ var group = bot.Groups.FirstOrDefault();
 <tr>
 <td>发送群公告</td>
 <td>group.SendNotice()</td>
-<td>我没有发送成功，这是个问题，图片估计也有问题</td>
+<td>我没有发送成功，暂不知哪里出了问题</td>
 </tr>
 
 <tr>
@@ -170,13 +170,7 @@ var group = bot.Groups.FirstOrDefault();
 <tr>
 <td>上传到群文件</td>
 <td>group.UploadFilesByPath()</td>
-<td>UploadFilesByUrl()，UploadFilesByBase64</td>
-</tr>
-
-<tr>
-<td>上传到群文件</td>
-<td>group.UploadFilesByPath()</td>
-<td>UploadFilesByUrl()，UploadFilesByBase64</td>
+<td>UploadFilesByUrl()，UploadFilesByBase64()</td>
 </tr>
 </table>
 
@@ -187,17 +181,15 @@ var friend = bot.Firends.FirstOrDefault();
 ```
 <table>
 <tr>
-<th>机器人可@全体成员的剩余次数</th>
-<th>friend.AtAllCount</th>
-<th></th>
+<th>上传文件</th>
+<th>friend.UploadFilesByPath()</th>
+<th>friend.UploadFilesByUrl(),friend.UploadFilesByBase64()</th>
 </tr>
 </table>
 
 ## 其他API
 ```C#
 var bot = new Bot(new Config())
-var friend = bot.Firends.FirstOrDefault();
-var group = bot.Groups.FirstOrDefault();
 ```
 <table>
 <tr>

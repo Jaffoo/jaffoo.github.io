@@ -1,4 +1,4 @@
-import{_ as r,r as t,o as l,c,b as n,a as e,d as s,w as d,e as i}from"./app-cwFVImHW.js";const o={},u=i(`<h2 id="nuget安装" tabindex="-1"><a class="header-anchor" href="#nuget安装" aria-hidden="true">#</a> Nuget安装</h2><p>Nuget搜索ShamrockCore即可下载使用，同时，你可能还需要安装Manganese和System.Reactive.Linq。</p><h3 id="可能需要的命名空间如下" tabindex="-1"><a class="header-anchor" href="#可能需要的命名空间如下" aria-hidden="true">#</a> 可能需要的命名空间如下</h3><details><div class="language-c# line-numbers-mode" data-ext="c#"><pre class="language-c#"><code>using Manganese.Text;
+import{_ as r,r as t,o as l,c,b as n,a as e,d as s,w as d,e as i}from"./app-Hb2a7Tbe.js";const o={},u=i(`<h2 id="nuget安装" tabindex="-1"><a class="header-anchor" href="#nuget安装" aria-hidden="true">#</a> Nuget安装</h2><p>Nuget搜索ShamrockCore即可下载使用，同时，你可能还需要安装Manganese和System.Reactive.Linq。</p><h3 id="可能需要的命名空间如下" tabindex="-1"><a class="header-anchor" href="#可能需要的命名空间如下" aria-hidden="true">#</a> 可能需要的命名空间如下</h3><details><div class="language-c# line-numbers-mode" data-ext="c#"><pre class="language-c#"><code>using Manganese.Text;
 using ShamrockCore.Reciver;
 using ShamrockCore.Reciver.Events;
 using ShamrockCore.Reciver.MsgChain;
