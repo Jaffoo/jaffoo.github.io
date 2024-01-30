@@ -64,6 +64,7 @@ bot.UnknownMessageReceived.Subscribe(msg =>
 
 ### 阻塞线程
 正常来说，ws属于长连接，所以要保证ws所在的线程不被释放。
+
 ```C#
 while (true)
 {

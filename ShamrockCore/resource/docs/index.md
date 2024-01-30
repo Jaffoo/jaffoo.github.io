@@ -2,7 +2,7 @@
 home: true
 heroImage: https://element.ele.me/static/theme-index-blue.c38b733.png
 heroText: ShamrockCore
-tagline: Openshamrock支持库
+tagline: 基于C#.NET6的Openshamrock适配器
 actions:
   - text: 快速上手
     link: /start
