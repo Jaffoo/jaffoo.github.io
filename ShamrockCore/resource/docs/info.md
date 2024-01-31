@@ -39,6 +39,10 @@
 - 确保ip和端口配置正确；
 - 程序和ws服务的网络环境能互通；
 - 如果使用的模拟器，别忘记模拟器和PC端口映射；
+2. 某些功能无法正常使用
+- 确保使用的Openshamrock是**最新开发**版本。
+- 确保使用的ShamrockCore是**最新**版本。
+- 如果均是最新版本仍然不可使用，请通过issue或者下面的群进行反馈。
 ## 反馈与交流
 <br>Github提交[Issues](https://github.com/Jaffoo/ShamrockCore.NET/issues);
 <br>🐧群：[327443854](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=xeymCEAlzjVcq4zO9vQQwsXoHulWWw5b&authKey=tj6nblI3QUewB9NAZsQ18LrAWQTXwlzp1ObiNK3m6tn3Kle%2BE6gKlOZxcYbbNkm%2B&noverify=0&group_code=327443854)。

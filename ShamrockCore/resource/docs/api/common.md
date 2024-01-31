@@ -54,10 +54,16 @@ bot.MessageReceived.OfType<GroupReceiver>().Subscribe(async msg =>
 <td>msg.Sender.RemoveAdmin()</td>
 <td></td>
 </tr>
+
+<tr>
+<td>设置成员群名片</td>
+<td>msg.Sender.SetCard()</td>
+<td></td>
+</tr>
 </table>
 
 ## 群成员相关API
-和上面的Sender是同一个对象，所有API同上。
+Member和上面的Sender是同一个对象，所有API同上。
 
 ## 群相关API
 ```C#
@@ -171,6 +177,12 @@ var group = bot.Groups.FirstOrDefault();
 <td>上传到群文件</td>
 <td>group.UploadFilesByPath()</td>
 <td>UploadFilesByUrl()，UploadFilesByBase64()</td>
+</tr>
+
+<tr>
+<td>设置群备注</td>
+<td>group.SetGroupRemark()</td>
+<td></td>
 </tr>
 </table>
 
