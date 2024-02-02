@@ -133,13 +133,13 @@ MessageChain msgChain = new MessageChainBuilder()
 //参数三选一，优先级filePath>url>base64
 MessageChain msgChain = new MessageChain()
 {
-    new ImageMessage("filePath","url","base64"),
+    new ImageMessage(file:"filePath",url:"url",base64:"base64",imgType,imgSubType),
 };
 
 MessageChain msgChain = new MessageChainBuilder()
-.ImageByPath("path")
-.ImageByUrl("url")
-.ImageByBase64("base64")
+.ImageByPath("path",imgType,imgSubType)
+.ImageByUrl("url",imgType,imgSubType)
+.ImageByBase64("base64",imgType,imgSubType)
 .Build();
 ```
 ### 音频消息
@@ -368,6 +368,18 @@ MessageChain msgChain = new MessageChain()
 
 MessageChain msgChain = new MessageChainBuilder()
 .Json(new JsonMessage.Body())
+.Build();
+```
+
+### 弹射表情
+```C#
+MessageChain msgChain = new MessageChain()
+{
+    new BubbleFaceMessage(1,2),
+};
+
+MessageChain msgChain = new MessageChainBuilder()
+.BubbleFace(1,2)
 .Build();
 ```
 

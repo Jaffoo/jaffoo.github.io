@@ -1,4 +1,4 @@
-import{_ as a,r as d,o as l,c as r,a as i,b as e,d as v,e as n}from"./app-Hb2a7Tbe.js";const u={},c=n(`<h2 id="接收消息" tabindex="-1"><a class="header-anchor" href="#接收消息" aria-hidden="true">#</a> 接收消息</h2><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>//所有消息
+import{_ as a,r as d,o as l,c as r,a as i,b as e,d as v,e as n}from"./app-PzQAEeMs.js";const u={},c=n(`<h2 id="接收消息" tabindex="-1"><a class="header-anchor" href="#接收消息" aria-hidden="true">#</a> 接收消息</h2><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>//所有消息
 bot.MessageReceived.OfType&lt;MessageReceiverBase&gt;().Subscribe(async msg =&gt;
 {
     if (msg.Type == PostMessageType.Group)
@@ -83,13 +83,13 @@ MessageChain msgChain = new MessageChainBuilder()
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="图片消息" tabindex="-1"><a class="header-anchor" href="#图片消息" aria-hidden="true">#</a> 图片消息</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>//参数三选一，优先级filePath&gt;url&gt;base64
 MessageChain msgChain = new MessageChain()
 {
-    new ImageMessage(&quot;filePath&quot;,&quot;url&quot;,&quot;base64&quot;),
+    new ImageMessage(file:&quot;filePath&quot;,url:&quot;url&quot;,base64:&quot;base64&quot;,imgType,imgSubType),
 };
 
 MessageChain msgChain = new MessageChainBuilder()
-.ImageByPath(&quot;path&quot;)
-.ImageByUrl(&quot;url&quot;)
-.ImageByBase64(&quot;base64&quot;)
+.ImageByPath(&quot;path&quot;,imgType,imgSubType)
+.ImageByUrl(&quot;url&quot;,imgType,imgSubType)
+.ImageByBase64(&quot;base64&quot;,imgType,imgSubType)
 .Build();
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="音频消息" tabindex="-1"><a class="header-anchor" href="#音频消息" aria-hidden="true">#</a> 音频消息</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>//参数二选一，优先级filePath&gt;url&gt;base64
 MessageChain msgChain = new MessageChain()
@@ -246,4 +246,12 @@ MessageChain msgChain = new MessageChainBuilder()
 MessageChain msgChain = new MessageChainBuilder()
 .Json(new JsonMessage.Body())
 .Build();
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="xml消息" tabindex="-1"><a class="header-anchor" href="#xml消息" aria-hidden="true">#</a> XML消息</h3><p>暂不支持</p>`,35);function t(b,h){const s=d("ExternalLinkIcon");return l(),r("div",null,[c,i("p",null,[e("表情ID可以到"),i("a",m,[e("这里"),v(s)]),e("查看")]),g])}const C=a(u,[["render",t],["__file","message.html.vue"]]);export{C as default};
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="弹射表情" tabindex="-1"><a class="header-anchor" href="#弹射表情" aria-hidden="true">#</a> 弹射表情</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+{
+    new BubbleFaceMessage(1,2),
+};
+
+MessageChain msgChain = new MessageChainBuilder()
+.BubbleFace(1,2)
+.Build();
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="xml消息" tabindex="-1"><a class="header-anchor" href="#xml消息" aria-hidden="true">#</a> XML消息</h3><p>暂不支持</p>`,37);function b(h,t){const s=d("ExternalLinkIcon");return l(),r("div",null,[c,i("p",null,[e("表情ID可以到"),i("a",m,[e("这里"),v(s)]),e("查看")]),g])}const C=a(u,[["render",b],["__file","message.html.vue"]]);export{C as default};
