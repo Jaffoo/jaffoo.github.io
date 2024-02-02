@@ -372,6 +372,7 @@ MessageChain msgChain = new MessageChainBuilder()
 ```
 
 ### 弹射表情
+表情ID可以到[这里](https://github.com/richardchien/coolq-http-api/wiki/%E8%A1%A8%E6%83%85-CQ-%E7%A0%81-ID-%E8%A1%A8)查看
 ```C#
 MessageChain msgChain = new MessageChain()
 {
