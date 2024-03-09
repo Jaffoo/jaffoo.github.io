@@ -13,6 +13,11 @@ bot.MessageReceived.OfType<MessageReceiverBase>().Subscribe(async msg =>
         var msg1 = msg as FriendReceiver;
         await Console.Out.WriteLineAsync("好友消息：" + msg1.ToJsonString());
     }
+    if (msg.Type == PostMessageType.Guild)
+    {
+        var msg1 = msg as GuildReceiver;
+        await Console.Out.WriteLineAsync("频道消息：" + msg1.ToJsonString());
+    }
 });
 //或者分开
 bot.MessageReceived.OfType<GroupReceiver>().Subscribe(async msg =>{
@@ -21,6 +26,10 @@ bot.MessageReceived.OfType<GroupReceiver>().Subscribe(async msg =>{
 
 bot.MessageReceived.OfType<FriendReceiver>().Subscribe(async msg =>{
     await Console.Out.WriteLineAsync("好友消息：" + msg.ToJsonString());
+})
+
+bot.MessageReceived.OfType<GuildReceiver>().Subscribe(async msg =>{
+    await Console.Out.WriteLineAsync("频道消息：" + msg.ToJsonString());
 })
 ```
 
@@ -68,12 +77,18 @@ MessageChain msgChain = new MessageChainBuilder()
 
 ## 主动发送消息
 发送消息分为主动和被动发送，主动调用静态类（MessageManager）可发送消息。（请勿在初始化前调用）
+
+注意：频道特殊，所以不支持主动通过频道id发送，但是可以通过获取频道的子频道后调用子频道发送消息接口。
 <br>示例：
 
 ```C#
 //以下方法均支持重载，展示只是发送简单纯文本消息，发送复杂消息，请用消息链。
 await MessageManager.SendGroupMsgAsync(123,"这是群号为123的群吗?");
 await MessageManager.SendPrivateMsgAsync(123,"你的qq才有3位数诶。");
+
+//频道
+var channls = await bot.GuildList[0].Channels();
+channls[0].SendChannelMsg("你好，我刚加入频道");
 //还有更多发送消息的方法，比如合并转发等。如需使用，请自行查看
 //由于本人精力有限，合并转发等特殊发消息未作测试，如使用有问题，请反馈给我，会尽快处理。
 ```
@@ -94,12 +109,17 @@ bot.MessageReceived.OfType<GroupReceiver>().Subscribe(async msg =>{
 bot.MessageReceived.OfType<FriendReceiver>().Subscribe(async msg =>{
     await msg.SendPrivateMsgAsync("你好，我收到消息了")
 })
+
+//频道
+bot.MessageReceived.OfType<GuildReceiver>().Subscribe(async msg =>{
+    await msg.SendPrivateMsgAsync("let me see，谁在频道发送消息了")
+})
 ```
 
 同样的，以上方法支持重载
 
 ## 消息类型
-
+（注：频道特殊，不是所有的消息类型都能发出，请自行验证）
 ### at消息
 ```C#
 MessageChain msgChain = new MessageChain()

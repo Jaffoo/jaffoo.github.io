@@ -1,4 +1,4 @@
-import{_ as a,r as d,o as l,c as r,a as i,b as e,d as v,e as n}from"./app-PzQAEeMs.js";const u={},c=n(`<h2 id="接收消息" tabindex="-1"><a class="header-anchor" href="#接收消息" aria-hidden="true">#</a> 接收消息</h2><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>//所有消息
+import{_ as d,r as l,o as r,c as v,a as i,b as e,d as a,e as n}from"./app-CQLQfqbR.js";const u={},c=n(`<h2 id="接收消息" tabindex="-1"><a class="header-anchor" href="#接收消息" aria-hidden="true">#</a> 接收消息</h2><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>//所有消息
 bot.MessageReceived.OfType&lt;MessageReceiverBase&gt;().Subscribe(async msg =&gt;
 {
     if (msg.Type == PostMessageType.Group)
@@ -11,6 +11,11 @@ bot.MessageReceived.OfType&lt;MessageReceiverBase&gt;().Subscribe(async msg =&gt
         var msg1 = msg as FriendReceiver;
         await Console.Out.WriteLineAsync(&quot;好友消息：&quot; + msg1.ToJsonString());
     }
+    if (msg.Type == PostMessageType.Guild)
+    {
+        var msg1 = msg as GuildReceiver;
+        await Console.Out.WriteLineAsync(&quot;频道消息：&quot; + msg1.ToJsonString());
+    }
 });
 //或者分开
 bot.MessageReceived.OfType&lt;GroupReceiver&gt;().Subscribe(async msg =&gt;{
@@ -20,7 +25,11 @@ bot.MessageReceived.OfType&lt;GroupReceiver&gt;().Subscribe(async msg =&gt;{
 bot.MessageReceived.OfType&lt;FriendReceiver&gt;().Subscribe(async msg =&gt;{
     await Console.Out.WriteLineAsync(&quot;好友消息：&quot; + msg.ToJsonString());
 })
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="消息类型转换" tabindex="-1"><a class="header-anchor" href="#消息类型转换" aria-hidden="true">#</a> 消息类型转换</h2><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>bot.MessageReceived.OfType&lt;GroupReceiver&gt;().Subscribe(async msg =&gt;
+
+bot.MessageReceived.OfType&lt;GuildReceiver&gt;().Subscribe(async msg =&gt;{
+    await Console.Out.WriteLineAsync(&quot;频道消息：&quot; + msg.ToJsonString());
+})
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="消息类型转换" tabindex="-1"><a class="header-anchor" href="#消息类型转换" aria-hidden="true">#</a> 消息类型转换</h2><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>bot.MessageReceived.OfType&lt;GroupReceiver&gt;().Subscribe(async msg =&gt;
 {
     await Console.Out.WriteLineAsync(&quot;群消息：&quot; + msg.ToJsonString());
     foreach (var item in msg.Message)
@@ -44,12 +53,16 @@ bot.MessageReceived.OfType&lt;FriendReceiver&gt;().Subscribe(async msg =&gt;{
 .Text(&quot;你好qq号是123的群友，我at了你！&quot;)
 .At(123)
 .Build();
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="主动发送消息" tabindex="-1"><a class="header-anchor" href="#主动发送消息" aria-hidden="true">#</a> 主动发送消息</h2><p>发送消息分为主动和被动发送，主动调用静态类（MessageManager）可发送消息。（请勿在初始化前调用） <br>示例：</p><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>//以下方法均支持重载，展示只是发送简单纯文本消息，发送复杂消息，请用消息链。
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="主动发送消息" tabindex="-1"><a class="header-anchor" href="#主动发送消息" aria-hidden="true">#</a> 主动发送消息</h2><p>发送消息分为主动和被动发送，主动调用静态类（MessageManager）可发送消息。（请勿在初始化前调用）</p><p>注意：频道特殊，所以不支持主动通过频道id发送，但是可以通过获取频道的子频道后调用子频道发送消息接口。 <br>示例：</p><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>//以下方法均支持重载，展示只是发送简单纯文本消息，发送复杂消息，请用消息链。
 await MessageManager.SendGroupMsgAsync(123,&quot;这是群号为123的群吗?&quot;);
 await MessageManager.SendPrivateMsgAsync(123,&quot;你的qq才有3位数诶。&quot;);
+
+//频道
+var channls = await bot.GuildList[0].Channels();
+channls[0].SendChannelMsg(&quot;你好，我刚加入频道&quot;);
 //还有更多发送消息的方法，比如合并转发等。如需使用，请自行查看
 //由于本人精力有限，合并转发等特殊发消息未作测试，如使用有问题，请反馈给我，会尽快处理。
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="被动动发送消息" tabindex="-1"><a class="header-anchor" href="#被动动发送消息" aria-hidden="true">#</a> 被动动发送消息</h2><p>当接收到消息时，无论是好友还是群消息，都可以快速回复 <br>例如：</p><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>//群
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="被动动发送消息" tabindex="-1"><a class="header-anchor" href="#被动动发送消息" aria-hidden="true">#</a> 被动动发送消息</h2><p>当接收到消息时，无论是好友还是群消息，都可以快速回复 <br>例如：</p><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>//群
 bot.MessageReceived.OfType&lt;GroupReceiver&gt;().Subscribe(async msg =&gt;{
     await msg.SendGroupMsgAsync(&quot;你好，我收到消息了&quot;)
     await msg.Member.SendPrivateMsgAsync(&quot;群友，你好&quot;);
@@ -60,7 +73,12 @@ bot.MessageReceived.OfType&lt;GroupReceiver&gt;().Subscribe(async msg =&gt;{
 bot.MessageReceived.OfType&lt;FriendReceiver&gt;().Subscribe(async msg =&gt;{
     await msg.SendPrivateMsgAsync(&quot;你好，我收到消息了&quot;)
 })
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>同样的，以上方法支持重载</p><h2 id="消息类型" tabindex="-1"><a class="header-anchor" href="#消息类型" aria-hidden="true">#</a> 消息类型</h2><h3 id="at消息" tabindex="-1"><a class="header-anchor" href="#at消息" aria-hidden="true">#</a> at消息</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+
+//频道
+bot.MessageReceived.OfType&lt;GuildReceiver&gt;().Subscribe(async msg =&gt;{
+    await msg.SendPrivateMsgAsync(&quot;let me see，谁在频道发送消息了&quot;)
+})
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>同样的，以上方法支持重载</p><h2 id="消息类型" tabindex="-1"><a class="header-anchor" href="#消息类型" aria-hidden="true">#</a> 消息类型</h2><p>（注：频道特殊，不是所有的消息类型都能发出，请自行验证）</p><h3 id="at消息" tabindex="-1"><a class="header-anchor" href="#at消息" aria-hidden="true">#</a> at消息</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
 {
     new AtMessage(123),//at 123
     new AtMessage(0),//at 全体成员，需要管理员权限
@@ -109,7 +127,7 @@ MessageChain msgChain = new MessageChainBuilder()
 MessageChain msgChain = new MessageChainBuilder()
 .Video(&quot;path&quot;)
 .Build();
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="表情消息" tabindex="-1"><a class="header-anchor" href="#表情消息" aria-hidden="true">#</a> 表情消息</h3>`,29),m={href:"https://github.com/richardchien/coolq-http-api/wiki/%E8%A1%A8%E6%83%85-CQ-%E7%A0%81-ID-%E8%A1%A8",target:"_blank",rel:"noopener noreferrer"},g=n(`<div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="表情消息" tabindex="-1"><a class="header-anchor" href="#表情消息" aria-hidden="true">#</a> 表情消息</h3>`,31),m={href:"https://github.com/richardchien/coolq-http-api/wiki/%E8%A1%A8%E6%83%85-CQ-%E7%A0%81-ID-%E8%A1%A8",target:"_blank",rel:"noopener noreferrer"},g=n(`<div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
 {
     new FaceMessage(1),//表情id
 };
@@ -246,7 +264,7 @@ MessageChain msgChain = new MessageChainBuilder()
 MessageChain msgChain = new MessageChainBuilder()
 .Json(new JsonMessage.Body())
 .Build();
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="弹射表情" tabindex="-1"><a class="header-anchor" href="#弹射表情" aria-hidden="true">#</a> 弹射表情</h3><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="弹射表情" tabindex="-1"><a class="header-anchor" href="#弹射表情" aria-hidden="true">#</a> 弹射表情</h3>`,34),t={href:"https://github.com/richardchien/coolq-http-api/wiki/%E8%A1%A8%E6%83%85-CQ-%E7%A0%81-ID-%E8%A1%A8",target:"_blank",rel:"noopener noreferrer"},b=n(`<div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>MessageChain msgChain = new MessageChain()
 {
     new BubbleFaceMessage(1,2),
 };
@@ -254,4 +272,4 @@ MessageChain msgChain = new MessageChainBuilder()
 MessageChain msgChain = new MessageChainBuilder()
 .BubbleFace(1,2)
 .Build();
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="xml消息" tabindex="-1"><a class="header-anchor" href="#xml消息" aria-hidden="true">#</a> XML消息</h3><p>暂不支持</p>`,37);function b(h,t){const s=d("ExternalLinkIcon");return l(),r("div",null,[c,i("p",null,[e("表情ID可以到"),i("a",m,[e("这里"),v(s)]),e("查看")]),g])}const C=a(u,[["render",b],["__file","message.html.vue"]]);export{C as default};
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="xml消息" tabindex="-1"><a class="header-anchor" href="#xml消息" aria-hidden="true">#</a> XML消息</h3><p>暂不支持</p>`,3);function h(o,C){const s=l("ExternalLinkIcon");return r(),v("div",null,[c,i("p",null,[e("表情ID可以到"),i("a",m,[e("这里"),a(s)]),e("查看")]),g,i("p",null,[e("表情ID可以到"),i("a",t,[e("这里"),a(s)]),e("查看")]),b])}const p=d(u,[["render",h],["__file","message.html.vue"]]);export{p as default};

@@ -16,9 +16,25 @@ using System.Reactive.Linq;
 </details>
 
 ## 初始化
+分为两种，主动websocket和被动websocket。
 
+**什么是主动websocket**：openshamrock做为websocket服务端，ShamrockCore.NET作为websocket客户端
+
+**什么时候选择主动**：如果你的程序里，有且仅有一个webscoket功能，也就是只需要获取qq消息，选这个。
+
+**什么是被动websocket**：openshamrock做为websocket客户端，ShamrockCore.NET作为websocket服务端
+
+**什么时候选择被动**：如果你的程序里其他功能还需要websocket，那么这个时候用这个合适。
+举个例子：比如你用了主动websocket，你的前端还需要和你的后端建立websocket连接发送消息，这个时候意味着你程序里有两个websocket一个作为客户端和QQ通信，一个作为服务端和前端通信，
+这种情况选择被动websocket，这样openshamrock和你的前端都是客户端，一同访问ShamrockCore.NET的服务端，这样一来，就只需要一个websocket服务端就可以实现同时和QQ，前端通信的功能。
 ```c#
+//主动websocket连接
 var config = new ConnectConfig("Host", websocket_port, http_port, "token");
+using Bot bot = new(config);
+await bot.Start();
+
+//被动websocket连接
+var config = new ConnectConfig("http://localhost:10022", passive_websocket_port, "token");//此处token无用，下个版本看情况加上还是删除
 using Bot bot = new(config);
 await bot.Start();
 ```
@@ -27,6 +43,7 @@ await bot.Start();
 <br>websocket_port：必填，主动webscoket端口
 <br>http_port：必填，http接口端口
 <br>token：选填，建议公网使用token
+<br>passive_websocket_port：选填，默认值6051
 
 ## 接收消息
 ### 群消息
@@ -41,6 +58,13 @@ bot.MessageReceived.OfType<GroupReceiver>().Subscribe(async msg =>{
 ```C#
 bot.MessageReceived.OfType<FriendReceiver>().Subscribe(async msg =>{
     await Console.Out.WriteLineAsync("好友消息：" + msg.ToJsonString());
+})
+```
+
+### 频道消息
+```C#
+bot.MessageReceived.OfType<GuildReceiver>().Subscribe(async msg =>{
+    await Console.Out.WriteLineAsync("频道消息：" + msg.ToJsonString());
 })
 ```
 
