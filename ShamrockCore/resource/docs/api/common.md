@@ -60,6 +60,12 @@ bot.MessageReceived.OfType<GroupReceiver>().Subscribe(async msg =>
 <td>msg.Sender.SetCard()</td>
 <td></td>
 </tr>
+
+<tr>
+<td>成员资料卡点赞</td>
+<td>msg.Sender.Like()</td>
+<td></td>
+</tr>
 </table>
 
 ## 群成员相关API
@@ -184,6 +190,12 @@ var group = bot.Groups.FirstOrDefault();
 <td>group.SetGroupRemark()</td>
 <td></td>
 </tr>
+
+<tr>
+<td>机器人可@全体成员的剩余次数</td>
+<td>group.AtAllCount</td>
+<td></td>
+</tr>
 </table>
 
 ## 好友相关API
@@ -196,6 +208,12 @@ var friend = bot.Firends.FirstOrDefault();
 <th>上传文件</th>
 <th>friend.UploadFilesByPath()</th>
 <th>friend.UploadFilesByUrl(),friend.UploadFilesByBase64()</th>
+</tr>
+
+<tr>
+<td>成员资料卡点赞</td>
+<td>friend.Like()</td>
+<td></td>
 </tr>
 </table>
 

@@ -29,21 +29,22 @@ using System.Reactive.Linq;
 这种情况选择被动websocket，这样openshamrock和你的前端都是客户端，一同访问ShamrockCore.NET的服务端，这样一来，就只需要一个websocket服务端就可以实现同时和QQ，前端通信的功能。
 ```c#
 //主动websocket连接
-var config = new ConnectConfig("Host", websocket_port, http_port, "token");
+var config = new ConnectConfig(Host:"192.168.2.10", WsPort:5800, HttpPort:5700, Token:"token");
 using Bot bot = new(config);
 await bot.Start();
 
 //被动websocket连接
-var config = new ConnectConfig("http://localhost:10022", passive_websocket_port, "token");//此处token无用，下个版本看情况加上还是删除
+var config = new ConnectConfig(Host:"192.168.2.10", WsPort:5800, HttpPort:5700, Token:"token", Reverse:true);
+//此处token无用，下个版本看情况加上还是删除
 using Bot bot = new(config);
 await bot.Start();
+//注意被动websocket的服务地址是0.0.0.0，所以当你填入openshamnrock时候，如果是内网使用填ws://127.0.0.1:WsPort（ws://127.0.0.1:5800）或者ws://localhost:WsPort（ws://localhost:5800）,如果是公网的话，请自行查询公网ip地址填入例如 ：ws://{IP}:WsPort
 ```
 <h3>说明：</h3>
 <br>Host：必填，纯IP地址，请勿带协议前缀如：http
-<br>websocket_port：必填，主动webscoket端口
+<br>WsPort：必填，正向/反向ws端口
 <br>http_port：必填，http接口端口
 <br>token：选填，建议公网使用token
-<br>passive_websocket_port：选填，默认值6051
 
 ## 接收消息
 ### 群消息
