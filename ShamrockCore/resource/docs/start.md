@@ -38,7 +38,11 @@ var config = new ConnectConfig(Host:"192.168.2.10", WsPort:5800, HttpPort:5700, 
 //此处token无用，下个版本看情况加上还是删除
 using Bot bot = new(config);
 await bot.Start();
-//注意被动websocket的服务地址是0.0.0.0，所以当你填入openshamnrock时候，如果是内网使用填ws://127.0.0.1:WsPort（ws://127.0.0.1:5800）或者ws://localhost:WsPort（ws://localhost:5800）,如果是公网的话，请自行查询公网ip地址填入例如 ：ws://{IP}:WsPort
+//注意被动websocket的服务地址是0.0.0.0。所以当你填入**openshamnrock**时候分为以下2中情况：
+
+//内网环境：ws://127.0.0.1:WsPort（ws://127.0.0.1:5800）或者ws://localhost:WsPort（ws://localhost:5800）；
+
+//公网环境：请自行查询公网ip地址填入例如 ：ws://{IP}:WsPort
 ```
 <h3>说明：</h3>
 <br>Host：必填，纯IP地址，请勿带协议前缀如：http
