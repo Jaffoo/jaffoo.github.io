@@ -1,4 +1,4 @@
-## 机器人API
+## 机器人 API
 
 ```C#
 Connect connect = new("localhost", 3001, 3000);
@@ -7,11 +7,11 @@ Bot bot = new(connect);
 
 <table>
 <tr>
-<th>名称</th>
-<th>类型</th>
-<th>使用</th>
-<th>参数</th>
-<th>说明</th>
+<th width='20%'>名称</th>
+<th width='10%'>类型</th>
+<th width='30%'>使用</th>
+<th width='20%'>参数</th>
+<th width='20%'>说明</th>
 </tr>
 
 <tr>
@@ -87,7 +87,7 @@ Bot bot = new(connect);
 </tr>
 
 <tr>
-<td>扩展api方法</td>
+<td><b>扩展api方法</b><a name='扩展api方法'></a></td>
 <td>方法</td>
 <td>bot.GetAsync</td>
 <td>apiEndpoint：请求端点；paramStr：请求参数字符串（url格式拼接好）</td>
@@ -95,7 +95,7 @@ Bot bot = new(connect);
 </tr>
 
 <tr>
-<td>扩展api方法</td>
+<td><b>扩展api方法</b></td>
 <td>方法</td>
 <td>bot.PostAsync</td>
 <td>apiEndpoint：请求端点；data：请求body数据(json字符串)</td>
@@ -111,21 +111,64 @@ Bot bot = new(connect);
 </tr>
 </table>
 
+## 群聊对象
+
+```C#
+ bot.MessageReceived.OfType<GroupReceiver>().Subscribe(gr =>
+ {
+
+ });
+```
+
+<table>
+<tr>
+<th width='20%'>名称</th>
+<th width='10%'>类型</th>
+<th width='30%'>使用</th>
+<th width='20%'>参数</th>
+<th width='20%'>说明</th>
+</tr>
+
+<tr>
+<td>群消息</td>
+<td>属性</td>
+<td>gr.Group</td>
+<td>无</td>
+<td><a href='#群对象'>群对象</a></td>
+</tr>
+
+<tr>
+<td>发送消息</td>
+<td>方法</td>
+<td>gr.SendMessage</td>
+<td>msg：消息内容</td>
+<td>存在重载，自行查看</td>
+</tr>
+
+<tr>
+<td>撤回消息</td>
+<td>方法</td>
+<td>gr.Recall</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</table>
+
 ## 群对象
 
 ```C#
-Connect connect = new("localhost", 3001, 3000,"111");
+Connect connect = new("localhost", 3001, 3000);
 Bot bot = new(connect);
 var group = bot.Groups[0];
 ```
 
 <table>
 <tr>
-<th>名称</th>
-<th>类型</th>
-<th>使用</th>
-<th>参数</th>
-<th>说明</th>
+<th width='20%'>名称</th>
+<th width='10%'>类型</th>
+<th width='30%'>使用</th>
+<th width='20%'>参数</th>
+<th width='20%'>说明</th>
 </tr>
 
 <tr>
@@ -133,7 +176,7 @@ var group = bot.Groups[0];
 <td>属性</td>
 <td>group.Members</td>
 <td>无</td>
-<td>[群成员对象](#群成员对象)</td>
+<td><a href='#群成员对象'>群成员对象</a></td>
 </tr>
 
 <tr>
@@ -201,22 +244,21 @@ var group = bot.Groups[0];
 </tr>
 </table>
 
-
 ## 群成员对象
 
 ```C#
-Connect connect = new("localhost", 3001, 3000,"111");
+Connect connect = new("localhost", 3001, 3000);
 Bot bot = new(connect);
 var member = bot.Groups[0].Members[0];
 ```
 
 <table>
 <tr>
-<th>名称</th>
-<th>类型</th>
-<th>使用</th>
-<th>参数</th>
-<th>说明</th>
+<th width='20%'>名称</th>
+<th width='10%'>类型</th>
+<th width='30%'>使用</th>
+<th width='20%'>参数</th>
+<th width='20%'>说明</th>
 </tr>
 
 <tr>
@@ -295,18 +337,18 @@ var member = bot.Groups[0].Members[0];
 ## 好友对象
 
 ```C#
-Connect connect = new("localhost", 3001, 3000,"111");
+Connect connect = new("localhost", 3001, 3000);
 Bot bot = new(connect);
 var friend = bot.Friends[0];
 ```
 
 <table>
 <tr>
-<th>名称</th>
-<th>类型</th>
-<th>使用</th>
-<th>参数</th>
-<th>说明</th>
+<th width='20%'>名称</th>
+<th width='10%'>类型</th>
+<th width='30%'>使用</th>
+<th width='20%'>参数</th>
+<th width='20%'>说明</th>
 </tr>
 
 <tr>
@@ -326,52 +368,9 @@ var friend = bot.Friends[0];
 </tr>
 </table>
 
-## 群聊对象
+## 框架扩展 API
 
-```C#
- bot.MessageReceived.OfType<GroupReceiver>().Subscribe(gr =>
- {
-
- });
-```
-
-<table>
-<tr>
-<th>名称</th>
-<th>类型</th>
-<th>使用</th>
-<th>参数</th>
-<th>说明</th>
-</tr>
-
-<tr>
-<td>群消息</td>
-<td>属性</td>
-<td>gr.Group</td>
-<td>无</td>
-<td>[群对象](#群对象)</td>
-</tr>
-
-<tr>
-<td>发送消息</td>
-<td>方法</td>
-<td>gr.SendMessage</td>
-<td>msg：消息内容</td>
-<td>存在重载，自行查看</td>
-</tr>
-
-<tr>
-<td>撤回消息</td>
-<td>方法</td>
-<td>gr.Recall</td>
-<td>无</td>
-<td>无</td>
-</tr>
-</table>
-
-## 框架扩展API
-
-onebot机器人实现框架会有一些自己的API（非onebot标准），此框架由于是按照onebot标准实现的，所以不提供也不会支持这些扩展api，不过此框架的[机器人api](#机器人api)中的提供了扩展API调用的方法，通过此方法可以调用这些API。例如：
+onebot 机器人实现框架会有一些自己的 API（非 onebot 标准），此框架由于是按照 onebot 标准实现的，所以不提供也不会支持这些扩展 api 的使用方法，不过可以通过此框架的[**扩展 api 方法**](#扩展api方法)调用到这些 API。例如：
 
 ```C#
 //例如框架扩展的api是upload_file，接口返回值假设是FileInfo类，需要传入path参数，则调用方法如下
