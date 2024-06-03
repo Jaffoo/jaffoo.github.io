@@ -91,7 +91,7 @@ bot.MessageReceived.OfType<GroupReceiver>().Subscribe(x =>
 
 ### 事件消息
 
-[更多](/ShamrockCore/doc/api/message.html#接收消息)
+[更多](/UnifyBot/doc/api/message.html#接收消息)
 
 ```C#
  bot.EventReceived.OfType<MessageReceiverBase>().Subscribe(x =>

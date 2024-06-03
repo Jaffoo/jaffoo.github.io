@@ -1,1 +1,0 @@
-import{_ as e,o as s,c as t,a as c}from"./app-pnXeUNnc.js";const o={},_=c("p",null,"未完待续",-1),a=[_];function n(r,l){return s(),t("div",null,a)}const d=e(o,[["render",n],["__file","message.html.vue"]]);export{d as default};

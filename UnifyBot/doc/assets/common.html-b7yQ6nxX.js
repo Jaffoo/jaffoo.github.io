@@ -1,1 +1,0 @@
-import{_ as e,o,c,a as t}from"./app-pnXeUNnc.js";const n={},_=t("p",null,"未完待续",-1),s=[_];function a(r,l){return o(),c("div",null,s)}const d=e(n,[["render",a],["__file","common.html.vue"]]);export{d as default};
