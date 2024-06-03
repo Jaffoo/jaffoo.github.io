@@ -1,4 +1,4 @@
-import{_ as e,o as t,c as d,e as r}from"./app-0NPKodNv.js";const n={},i=r(`<h2 id="事件监听说明" tabindex="-1"><a class="header-anchor" href="#事件监听说明" aria-hidden="true">#</a> 事件监听说明</h2><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>bot.EventReceived.OfType&lt;MessageReceiverBase&gt;().Subscribe(x =&gt;
+import{_ as e,o as t,c as d,e as r}from"./app-Sx5Z5IIA.js";const n={},i=r(`<h2 id="事件监听说明" tabindex="-1"><a class="header-anchor" href="#事件监听说明" aria-hidden="true">#</a> 事件监听说明</h2><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>bot.EventReceived.OfType&lt;MessageReceiverBase&gt;().Subscribe(x =&gt;
 {
     var ev = x as RequestFriend;
     //能接收到所有消息和事件

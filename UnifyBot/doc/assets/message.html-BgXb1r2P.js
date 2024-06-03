@@ -1,4 +1,4 @@
-import{_ as a,r as d,o as l,c as r,a as i,b as e,d as v,e as n}from"./app-0NPKodNv.js";const u={},c=n(`<h2 id="接收消息" tabindex="-1"><a class="header-anchor" href="#接收消息" aria-hidden="true">#</a> 接收消息</h2><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>//所有消息
+import{_ as a,r as d,o as l,c as r,a as i,b as e,d as v,e as n}from"./app-Sx5Z5IIA.js";const u={},c=n(`<h2 id="接收消息" tabindex="-1"><a class="header-anchor" href="#接收消息" aria-hidden="true">#</a> 接收消息</h2><div class="language-C# line-numbers-mode" data-ext="C#"><pre class="language-C#"><code>//所有消息
 bot.MessageReceived.OfType&lt;MessageReceiverBase&gt;().Subscribe(x =&gt;
 {
     //能接收到所有消息和事件

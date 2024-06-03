@@ -371,9 +371,10 @@ var friend = bot.Friends[0];
 
 ## 框架扩展API
 
-onebot机器人实现框架会有一些自己的API（非onebot标准），此框架由于是按照onebot标准实现的，所以不提供也不会支持这些扩展api，不过此框架提供了[机器人api](#机器人api)中的扩展方法，可以调用这些非标准API。例如：
+onebot机器人实现框架会有一些自己的API（非onebot标准），此框架由于是按照onebot标准实现的，所以不提供也不会支持这些扩展api，不过此框架的[机器人api](#机器人api)中的提供了扩展API调用的方法，通过此方法可以调用这些API。例如：
 
 ```C#
+//例如框架扩展的api是upload_file，接口返回值假设是FileInfo类，需要传入path参数，则调用方法如下
 bot.GetAsync("upload_file","?path=xxxxx");
 bot.GetAsync<FileInfo>("upload_file","?path=xxxxx");
 bot.PostAsync("upload_file",new {path="xxx"}.ToJsonStr());
