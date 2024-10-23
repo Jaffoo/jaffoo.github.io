@@ -44,6 +44,9 @@
 - 如果是QQ框架自己加的扩展方法/接口，请看[框架扩展方法自定义实现](/UnifyBot/doc/api/common.html#框架扩展api).
 - 如果以上均不是，请通过issue或者下面的群进行反馈。
 
+## 扩展框架
+- QQBotPlugin:基于此UnifyBot开发的机器人插件，使用简单（最低只需加一行代码，便可以运行在你的程序中），扩展性强，支持热插拔。[传送门](https://github.com/Jaffoo/QQBotPlugin)
+
 ## 反馈与交流
 <br>Github提交[Issues](https://github.com/Jaffoo/ShamrockCore.NET/issues);
 <br>🐧群：[327443854](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=xeymCEAlzjVcq4zO9vQQwsXoHulWWw5b&authKey=tj6nblI3QUewB9NAZsQ18LrAWQTXwlzp1ObiNK3m6tn3Kle%2BE6gKlOZxcYbbNkm%2B&noverify=0&group_code=327443854)。
