@@ -1,5 +1,5 @@
 ## 简介
-- 基于.NET 6开发，支持跨平台。
+- 基于.NET Standard 2.1开发，支持.net core>=3.0，Mono>=6.4，Xamarin各个平台，具体支持平台可查看[.net支持平台](https://learn.microsoft.com/zh-cn/dotnet/standard/net-standard?tabs=net-standard-2-1)
 - 基于Onebot V11实现的标准C#库
 <br>--【UnifyBot.Test】-控制台程序，用于调试测试
 <br>--【UnifyBot】-主程序
@@ -36,7 +36,7 @@
 - 程序和ws服务的网络环境能互通；
 
 2. 连接上qq服务但是无法正常发送接收消息
-- 检查是否使用了token，且token要一直。
+- 检查是否使用了token，且token要一致。
 
 2. 某些功能无法正常使用
 - 确保使用的UnifyBot/LLOneBot是**最新**版本。。
@@ -49,4 +49,3 @@
 
 ## 反馈与交流
 <br>Github提交[Issues](https://github.com/Jaffoo/ShamrockCore.NET/issues);
-<br>🐧群：[327443854](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=xeymCEAlzjVcq4zO9vQQwsXoHulWWw5b&authKey=tj6nblI3QUewB9NAZsQ18LrAWQTXwlzp1ObiNK3m6tn3Kle%2BE6gKlOZxcYbbNkm%2B&noverify=0&group_code=327443854)。
