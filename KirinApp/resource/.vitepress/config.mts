@@ -34,7 +34,8 @@ export default defineConfig({
           { text: '属性', link: '/property' },
           { text: '加载类型', link: '/content' },
         ]
-      }, {
+      },
+      {
         text: 'API',
         collapsed: true,
         items: [
@@ -45,6 +46,17 @@ export default defineConfig({
           { text: '浏览器控件', link: '/webview' },
           { text: 'JS API', link: '/jsapi' }
         ]
+      },
+      {
+        text: '扩展',
+        collapsed: true,
+        items: [
+          { text: '自托管API服务', link: '/api' }
+        ]
+      },
+      {
+        text: '计划',
+        link: '/plan'
       }
     ],
     outline: {
