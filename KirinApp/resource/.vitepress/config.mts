@@ -7,7 +7,12 @@ export default defineConfig({
   description: "基于C#.NET的轻量级跨平台桌面程序开发框架",
   base: '/KirinApp/doc/',
   outDir: '../doc',
+  srcDir: 'pages',
+  head: [
+    ['link', { rel: 'icon', href: 'Kirin.png' }]
+  ],
   themeConfig: {
+    logo: '/Kirin.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },

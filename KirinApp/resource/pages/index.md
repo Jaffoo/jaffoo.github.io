@@ -5,6 +5,9 @@ layout: home
 hero:
   name: "KirinApp-麒麟"
   tagline: 基于C#.NET的轻量级跨平台桌面程序开发框架
+  image:
+    src: /Kirin.png
+    alt: VitePress
   actions:
     - theme: alt
       text: 框架指南
