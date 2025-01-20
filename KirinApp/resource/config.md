@@ -34,7 +34,7 @@
 
 默认：''
 
-说明：仅当[AppType](#apptype)为Http/Static时有效
+说明：仅当[AppType](#apptype-应用程序类型)为Http/Static时有效
 
 ## RawString-字符串
 类型：string
@@ -43,7 +43,7 @@
 
 默认：''
 
-说明：仅当[AppType](#apptype)为RawString时有效
+说明：仅当[AppType](#apptype-应用程序类型)为RawString时有效
 
 ## BlazorComponent-Blazor组件
 类型：Type
@@ -52,7 +52,7 @@
 
 默认：null
 
-说明：仅当[AppType](#apptype)为Blazor时有效
+说明：仅当[AppType](#apptype-应用程序类型)为Blazor时有效
 
 ## Chromeless-无边框
 类型：bool
@@ -124,7 +124,7 @@
 
 默认：0/0
 
-说明：仅当[Center](#center)为false时有效
+说明：仅当[Center](#center-窗口居中)为false时有效
 
 ## MinimumHeigh/MinimumWidth-最小宽高
 类型：int/int
